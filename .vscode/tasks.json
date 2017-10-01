@@ -1,0 +1,19 @@
+{
+    "version": "0.1.0",
+    "command": "run-server",
+    "isShellCommand": false,
+    "args": [],
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "npm-run-server",
+            "showOutput": "always",
+            "command": "npm",
+            "isBuildCommand": true,
+            "args": [
+                "run", 
+                "server"
+            ]
+        }
+    ]
+}
