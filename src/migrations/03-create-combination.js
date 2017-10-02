@@ -3,7 +3,6 @@ module.exports = {
     up: (queryInterface, Sequelize) => {
         return queryInterface.createTable('combination', {
             id: {
-                allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
                 type: Sequelize.INTEGER
@@ -23,6 +22,11 @@ module.exports = {
             distance: {
                 type: Sequelize.INTEGER,
                 allowNull: true
+            },
+            status: {
+                type: Sequelize.ENUM('OK', 'WARNING', 'NORMAL'),
+                defaultValue: 'NORMAL',
+                allowNull: false
             },
             createdAt: {
                 allowNull: false,

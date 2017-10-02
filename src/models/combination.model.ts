@@ -27,10 +27,10 @@ export interface ICombination {
 
 
 export interface ICombinationAttributes {
-    label: string;
-    min: number;
-    max: number;
-    distance: number;
+    label?: string;
+    min?: number;
+    max?: number;
+    distance?: number;
     status: Status;
 }
 
