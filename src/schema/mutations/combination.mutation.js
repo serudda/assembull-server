@@ -34,6 +34,7 @@ exports.resolver = {
                 min: args.input.min,
                 max: args.input.max,
                 distance: args.input.distance,
+                status: args.input.status,
             });
         },
     },

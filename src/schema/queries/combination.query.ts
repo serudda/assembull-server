@@ -53,6 +53,7 @@ query getCombinationById($combinationId : ID!) {
         min
         max
         distance
+        status
         __typename
     }
 }

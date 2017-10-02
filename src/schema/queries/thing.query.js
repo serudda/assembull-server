@@ -37,25 +37,21 @@ exports.resolver = {
 Queries:
 
 
-query getUiComponentById($uiComponentId : ID!) {
-    uiComponent(id: $uiComponentId) {
+query getThingById($thingId : ID!) {
+    thing(id: $thingId) {
         id
         name
-        css
-        scss
-        html
-        background
-        download
         __typename
-        colorPalette {
+        parts {
             id
-            category
-            description
+            label
             __typename
-            colors {
+            combinations {
                 id
-                hex
                 label
+                min
+                max
+                distance
                 __typename
             }
         }

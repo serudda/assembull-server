@@ -10,12 +10,19 @@ import { SequelizeModels } from './index';
 /*            INTERFACE             */
 /************************************/
 
+export enum Status {
+    OK,
+    WARNING,
+    NORMAL
+}
+
 export interface ICombination {
     id: number | null;
     label: string;
     min: number;
     max: number;
     distance: number;
+    status: Status;
 }
 
 
@@ -24,6 +31,7 @@ export interface ICombinationAttributes {
     min: number;
     max: number;
     distance: number;
+    status: Status;
 }
 
 
@@ -55,6 +63,12 @@ SequelizeStatic.Model<ICombinationInstance, ICombinationAttributes> {
             distance: {
                 type: dataTypes.INTEGER,
                 allowNull: true
+            },
+            status: {
+                type: dataTypes.ENUM,
+                values: ['OK', 'WARNING', 'NORMAL'],
+                allowNull: false,
+                defaultValue: 'NORMAL'
             }
         }, {
             timestamps: true,

@@ -1,5 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+/************************************/
+/*            INTERFACE             */
+/************************************/
+var Status;
+(function (Status) {
+    Status[Status["OK"] = 0] = "OK";
+    Status[Status["WARNING"] = 1] = "WARNING";
+    Status[Status["NORMAL"] = 2] = "NORMAL";
+})(Status = exports.Status || (exports.Status = {}));
 /*****************************************/
 /*              COLOR MODEL              */
 /*****************************************/
@@ -20,6 +29,12 @@ function default_1(sequelize, dataTypes) {
         distance: {
             type: dataTypes.INTEGER,
             allowNull: true
+        },
+        status: {
+            type: dataTypes.ENUM,
+            values: ['OK', 'WARNING', 'NORMAL'],
+            allowNull: false,
+            defaultValue: 'NORMAL'
         }
     }, {
         timestamps: true,
