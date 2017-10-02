@@ -53,15 +53,15 @@ SequelizeStatic.Model<ICombinationInstance, ICombinationAttributes> {
                 allowNull: true
             },
             min: {
-                type: dataTypes.INTEGER,
+                type: dataTypes.DECIMAL(10, 2),
                 allowNull: true
             },
             max: {
-                type: dataTypes.INTEGER,
+                type: dataTypes.DECIMAL(10, 2),
                 allowNull: true
             },
             distance: {
-                type: dataTypes.INTEGER,
+                type: dataTypes.DECIMAL(10, 2),
                 allowNull: true
             },
             status: {

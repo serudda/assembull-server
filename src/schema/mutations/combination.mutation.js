@@ -15,7 +15,7 @@ input CreateCombinationInput {
     min: Int
     max: Int
     distance: Int
-    status: Status!
+    status: Status
 }
 
 input UpdateCombinationInput {
@@ -24,7 +24,7 @@ input UpdateCombinationInput {
     min: Int
     max: Int
     distance: Int
-    status: Status!
+    status: Status
 }
 
 # Mutations
@@ -48,11 +48,6 @@ exports.resolver = {
                 status: args.input.status,
             })
                 .then((result) => {
-                /* NOTE: Sequelize returns an array with two elements
-                   The first element is always the number of affected
-                   rows, while the second element is the actual affected rows:
-                   result[1][0].dataValues
-                   */
                 return result;
             }).catch((e) => {
                 console.log('ERROR: addCombination: ', e);

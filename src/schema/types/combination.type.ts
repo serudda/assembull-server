@@ -12,9 +12,9 @@ enum Status {
 type Combination {
     id: ID!
     label: String
-    min: Int
-    max: Int
-    distance: Int
-    status: Status!
+    min: Float
+    max: Float
+    distance: Float
+    status: Status
 }
 `;
