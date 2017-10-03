@@ -14,9 +14,9 @@ enciende el server tomando este archivo como config de  la base, pero cuando
 quiero lanzar un migrate: sequelize db:migrate, toma la configuracion del .json.
 Buscar una solucion para sea el caso que sea siempre tome este archivo.*/
 exports.databaseConfig = {
-    username: 'lgitfxqxcmmqox',
-    password: 'dbd65a1bc01384d08aa148ecb8e0e937b2ed15214c15e09c9a79f6e4f87661d1',
-    database: 'd6g22ske5oult0',
+    username: 'rahfutqyapzjsm',
+    password: 'd2d2283821c67adc6411cc9e8c603a41b5773b483beac29c0abb604bd1bff975',
+    database: 'd1nosrscm1ia7a',
     port: match[4],
     host: match[3],
     // username: 'sergioruizdavila', // DEV
